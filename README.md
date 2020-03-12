@@ -34,6 +34,7 @@ void main() {
   int age = 33;
   print(age);
 }
+
 //Console
 "Mathieu"
 "Geoges"
@@ -66,6 +67,7 @@ void main() {
   print(passion);
   print(sport);
 }
+
 //Console
 "Mathieu"
 "Geoges"
@@ -105,6 +107,7 @@ void main() {
   """;
   print(triple);
 }
+
 //Console
 "Mathieux Codabee et j'ai 33 ans"
 "Mathieux Codabee et j'ai 33 ans"
@@ -143,6 +146,7 @@ void main() {
   print(division);
   print(remain);
 }
+
 //Console
 8
 33.3
@@ -152,4 +156,68 @@ void main() {
 5
 2
 2
+````
+
+## Les Booléens
+
+````dart
+void main() {
+  bool jaimeDart = true;
+  print(jaimeDart);
+
+  bool enTrainDeTelecharger = true;
+  enTrainDeTelecharger = false;
+}
+
+//Console
+true
+````
+
+## Les listes
+
+````dart
+void main() {
+  List maListe = ["Pierre", "Paul", "Jacques"];
+  print(maListe);
+  print(maListe.length);
+  print(maListe[0]);
+  maListe.add("Georges");
+  print(maListe);
+  maListe.remove("Pierre");
+  maListe.removeAt(0);
+  print(maListe);
+}
+
+//Console
+[Pierre, Paul, Jacques]
+3
+Pierre
+[Pierre, Paul, Jacques, Georges]
+[Paul, Jacques, Georges]
+````
+
+## Les Maps
+
+````dartvoid main() {
+  Map maMap = {"Pierre": 21, "Paul": 17, "Jacques": 56};
+  print(maMap.length);
+
+  maMap["Georges"] = 34;
+  print(maMap);
+
+  maMap.remove("Pierre");
+  maMap.clear();
+  print(maMap);
+}
+
+//Console
+3
+{Pierre: 21, Paul: 17, Jacques: 56, Georges: 34}
+{}
+````
+
+## Les conditions
+
+````dart
+
 ````
