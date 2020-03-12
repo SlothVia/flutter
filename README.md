@@ -38,7 +38,7 @@ void main() {
 "Mathieu"
 "Geoges"
 "Codabee"
-"33"
+33
 ````
 
 ## Constantes et Final
@@ -70,9 +70,9 @@ void main() {
 "Mathieu"
 "Geoges"
 "Codabee"
-"33"
+33
 "Marseille"
-"1984"
+1984
 "développer des applications"
 "AquaPoney"
 ````
@@ -108,7 +108,7 @@ void main() {
 //Console
 "Mathieux Codabee et j'ai 33 ans"
 "Mathieux Codabee et j'ai 33 ans"
-"32"
+32
 "MATHIEUX CODABEE ET J'AI 33 ANS" 
 "mathieux codabee et j'ai 33 ans" 
 "Le gras c'est la vie"
@@ -116,3 +116,40 @@ void main() {
   ça va ?""" 
 ````
 
+## Les nombres
+
+````dart
+void main() {
+  //int -> Nombre entier
+  //double -> nombre avec décimale
+
+  int entier = 8;
+  int operation = 3;
+  double decimal = 33.3;
+  print(entier);
+  print(decimal);
+
+  var sansType = 5;
+  print(sansType);
+
+  var addition = entier + operation;
+  print(addition);
+  var multiplication = entier * operation;
+  print(multiplication);
+  var soustraction = entier - operation;
+  print(soustraction);
+  var division = (entier / operation).floor();
+  var remain = entier % operation;
+  print(division);
+  print(remain);
+}
+//Console
+8
+33.3
+5
+11
+24
+5
+2
+2
+````
