@@ -35,16 +35,46 @@ void main() {
   print(age);
 }
 //Console
-Mathieu
-Geoges
-Codabee
-33
-
+"Mathieu"
+"Geoges"
+"Codabee"
+"33"
 ````
 
 ## Constantes et Final
 
 ````dart
+void main() {
+  var prenom = "Mathieu";
+  print(prenom);
+  prenom = "Georges";
+  print(prenom);
+  
+  String nom = "Codabee";
+  print(nom);
+  
+  int age = 33;
+  print(age);
+  
+  const lieuDeNaissance = "Marseille";
+  const int annee = 1984;
+  print(lieuDeNaissance);
+  print(annee);
+  
+  final passion = "développer des applications";
+  final String sport = "AquaPoney";
+  print(passion);
+  print(sport);
+}
+//Console
+"Mathieu"
+"Geoges"
+"Codabee"
+"33"
+"Marseille"
+"1984"
+"développer des applications"
+"AquaPoney"
 ````
 ## String ou chaînes de caractères
 
@@ -76,13 +106,13 @@ void main() {
   print(triple);
 }
 //Console
-Mathieux Codabee et j'ai 33 ans
-Mathieux Codabee et j'ai 33 ans
-32
-MATHIEUX CODABEE ET J'AI 33 ANS 
-mathieux codabee et j'ai 33 ans 
-Le gras c'est la vie
-  Salut
-  ça va ? 
+"Mathieux Codabee et j'ai 33 ans"
+"Mathieux Codabee et j'ai 33 ans"
+"32"
+"MATHIEUX CODABEE ET J'AI 33 ANS" 
+"mathieux codabee et j'ai 33 ans" 
+"Le gras c'est la vie"
+  """Salut
+  ça va ?""" 
 ````
 
