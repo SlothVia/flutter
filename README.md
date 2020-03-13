@@ -342,3 +342,28 @@ void main() {
 //Console
 "ouf on n'a pris que 3 buts"
 ````
+
+## Les Switch
+
+````dart
+void main() {
+  var ville = "Marseille";
+
+  switch (ville) {
+    case "Paris":
+      print("ici c'est Paris");
+      break;
+    case "Marseille":
+      print("A jamais les premiers");
+      break;
+    case "Nice":
+      print("Issa Nissa");
+      break;
+    default:
+      break;
+  }
+}
+
+//Console
+"A jamais les premiers"
+````
