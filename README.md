@@ -219,5 +219,107 @@ Pierre
 ## Les conditions
 
 ````dart
+void main() {
+  //Egalité ==
+  //Difference !=
+  //Sup >
+  //Inf <
+  //SupEgal >=
+  //InfEgal <=
 
+  var age = 6;
+  var ilPleut = true;
+
+  if (age == 18) {
+    print("Oui");
+  } else {
+    print("Non");
+  }
+
+  print(age == 18 ? "Oui" : "Non");
+
+  if (age >= 18) {
+    print("En voiture");
+  } else if (age >= 12) {
+    print("Dans le bus");
+  } else {
+    print("Dans la pousette");
+  }
+
+  if (!ilPleut) {
+    print("Prend ton kway");
+  } else {
+    print("Prend ton maillot");
+  }
+}
+
+//Console
+"Non"
+"Non"
+"Dans la pousette"
+"Prend ton maillot"
+````
+
+## Les boucles
+
+````dart
+void main() {
+  print("Hello 1");
+  print("Hello 2");
+
+  for (var x = 0; x < 10; x++) {
+    print("Salut les codeurs ${x + 1} fois");
+  }
+
+  List<String> maListe = ["Pierre", "Paul", "Jacques"];
+  for (var x = 0; x < maListe.length; x++) {
+    print(maListe[x]);
+  }
+
+  maListe.forEach((prenom) {
+    print(prenom);
+  });
+
+  maListe.forEach((prenom) => print(prenom));
+
+  Map map = {1: "Je", 2: "Tuco", 3: "Blondin", 4: "Sentenza"};
+
+  map.forEach((key, value) {
+    print("Numéro de key :  $key ===> nom : $value ");
+  });
+
+  map.forEach(
+      (key, value) => print("Numéro de key :  $key ===> nom : $value "));
+}
+
+//Console
+"Hello 1"
+"Hello 2"
+"Salut les codeurs 1 fois"
+"Salut les codeurs 2 fois"
+"Salut les codeurs 3 fois"
+"Salut les codeurs 4 fois"
+"Salut les codeurs 5 fois"
+"Salut les codeurs 6 fois"
+"Salut les codeurs 7 fois"
+"Salut les codeurs 8 fois"
+"Salut les codeurs 9 fois"
+"Salut les codeurs 10 fois"
+"Pierre"
+"Paul"
+"Jacques"
+"Pierre"
+"Paul"
+"Jacques"
+"Pierre"
+"Paul"
+"Jacques"
+"Numéro de key :  1 ===> nom : Je" 
+"Numéro de key :  2 ===> nom : Tuco" 
+"Numéro de key :  3 ===> nom : Blondin" 
+"Numéro de key :  4 ===> nom : Sentenza" 
+"Numéro de key :  1 ===> nom : Je" 
+"Numéro de key :  2 ===> nom : Tuco" 
+"Numéro de key :  3 ===> nom : Blondin" 
+"Numéro de key :  4 ===> nom : Sentenza" 
 ````
