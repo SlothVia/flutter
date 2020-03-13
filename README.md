@@ -367,3 +367,125 @@ void main() {
 //Console
 "A jamais les premiers"
 ````
+
+## Les fonctions de base
+
+````dart
+void main() {
+   void maPremiereFonction() {
+    //Code de la fonction
+   print("Super ma première fonction en Dart");
+  }
+  
+  maPremiereFonction();
+}
+
+//Console 
+"Super ma première fonction en Dart"
+````
+
+## Les fonctions avec paramètres
+
+````dart
+void main() {
+  void maPremiereFonction() {
+    //Code de la fonction
+    print("Salut");
+    print("Super ma première fonction en Dart");
+  }
+
+  maPremiereFonction();
+
+  void saluer(String prenom) {
+    print("Salutation $prenom");
+  }
+
+  saluer("Mathieu");
+}
+
+//Console
+"Salut"
+"Super ma première fonction en Dart"
+"Salutation Mathieu"
+````
+
+## Les fonctions avec retour
+
+````dart
+void main() {
+  String saluer2(String prenom) {
+    return "Salut $prenom";
+  }
+
+  var salutation = saluer2("Claude");
+  print(salutation);
+
+  int aireDuChamps(int longueur, int largeur) {
+    return longueur * largeur;
+  }
+
+  print(aireDuChamps(4, 2));
+
+  int aireModifie(int longueur, int largeur) => longueur * largeur;
+  print(aireModifie(5, 2));
+}
+
+//Console
+"Salut Claude"
+8
+10
+````
+
+## Exercices
+
+````dart
+//Faire une boucle de 0 à 100 et imprimer uniquement les nombres impairs
+void main(){
+for(var x = 0; x<100; x++){
+    if (x%2 != 0){
+      print(x);
+    }
+  }
+}
+````
+
+````dart
+//Créer une fonction pour convertir les degrés celsius en Farheneight
+void main() {
+  void convertir(int temp){
+      print("En celsius, la température est $temp °C");
+      var temp2 = (temp * 9/5) + 32;
+      print("En Fahrenheit, la température devient $temp2 F");
+  }
+  convertir(24);
+}
+````
+
+````dart
+void main() {
+  var age = 24;
+    if (age >= 0 && age <12) {
+      print("Eau");
+    }else if(age >= 12 && age < 18){
+      print("Soda");
+    }else{
+      print("Bière");
+    }
+}
+````
+
+````dart
+//Créer une Map String, bool avec une liste de garçons et filles, faire un print uniquement pour les filles
+void main(){
+  Map liste = {"Pierre": false, "Paul": false, "Jacques": false, "Paula": true, "Marie": true};
+  liste.forEach((key, value) {
+    if (value == true){
+      print ("$key est une fille");
+    }else {
+      print("$key est un garçon");
+    }
+  });
+}
+````
+
+
