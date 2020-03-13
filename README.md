@@ -260,7 +260,7 @@ void main() {
 "Prend ton maillot"
 ````
 
-## Les boucles
+## Les boucles For
 
 ````dart
 void main() {
@@ -322,4 +322,23 @@ void main() {
 "Numéro de key :  2 ===> nom : Tuco" 
 "Numéro de key :  3 ===> nom : Blondin" 
 "Numéro de key :  4 ===> nom : Sentenza" 
+````
+
+## Les boucles While
+
+````dart
+void main() {
+  var nombreDeBut = 3;
+  /*while(nombreDeBut < 3) {
+    print ("ouf on n'a pris que $nombreDeBut buts");
+    nombreDeBut++;
+  }*/
+  do {
+    print("ouf on n'a pris que $nombreDeBut buts");
+    nombreDeBut++;
+  } while (nombreDeBut < 3);
+}
+
+//Console
+"ouf on n'a pris que 3 buts"
 ````
