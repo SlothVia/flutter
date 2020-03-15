@@ -488,4 +488,198 @@ void main(){
 }
 ````
 
+# Section 5 : La programmation orienté objet
 
+
+## L'Objet
+
+Classe
+
+````dart
+void main() {
+  var punto = new Voiture("Fiat", "Punto", 66000, 2011, "Vert");
+  print(punto.marque);
+  print(punto.kilometrage);
+  punto.rouler();
+  print(punto.kilometrage);
+
+  var clio = new Voiture("Renault", "Clio", 210000, 2007, "Blanc");
+  print(clio.modele);
+}
+
+class Voiture {
+  String marque;
+  String modele;
+  int kilometrage;
+  int annee;
+  String couleur;
+
+  void rouler() {
+    kilometrage++;
+    print("Broom Broom");
+  }
+
+  Voiture(String marque, String modele, int kilometrage, int annee,
+      String couleur) {
+    this.marque = marque;
+    this.modele = modele;
+    this.kilometrage = kilometrage;
+    this.annee = annee;
+    this.couleur = couleur;
+  }
+}
+
+//Console
+"Fiat"
+66000
+"Broom Broom"
+66001
+"Clio"
+````
+
+## L'héritage
+
+````dart
+void main() {
+  var punto = new Voiture("Fiat", "Punto", 66000, 2011, "Vert");
+  print(punto.marque);
+  print(punto.kilometrage);
+  punto.rouler();
+  print(punto.kilometrage);
+
+  var clio = new Voiture("Renault", "Clio", 210000, 2007, "Blanc");
+  print(clio.modele);
+
+  var cc = new Cabriolet("Peugeot", "202cc", 20000, 2006, "Gris clair");
+  print(cc.couleur);
+  cc.cheveuxAuxVents();
+  cc.rouler();
+
+  var trac = new Tracteur(
+      "???", "Le rouge avec les grosses roues", 3000, 1970, "rouge", 25);
+  trac.rouler();
+  print(trac.kilometrage);
+  trac.pasPresse();
+}
+
+class Voiture {
+  String marque;
+  String modele;
+  int kilometrage;
+  int annee;
+  String couleur;
+
+  void freiner() {}
+
+  void rouler() {
+    kilometrage++;
+    print("Broom Broom");
+  }
+
+  Voiture(String marque, String modele, int kilometrage, int annee,
+      String couleur) {
+    this.marque = marque;
+    this.modele = modele;
+    this.kilometrage = kilometrage;
+    this.annee = annee;
+    this.couleur = couleur;
+  }
+}
+
+class Tracteur extends Voiture {
+  int vitesseMax;
+
+  void pasPresse() {
+    print(
+        "Vous qui etes derrière moi, prenez patience. Je ne vais qu'à $vitesseMax maximum");
+  }
+
+  Tracteur(String marque, String modele, int kilometrage, int annee,
+      String couleur, int vitesseMax)
+      : super(marque, modele, kilometrage, annee, couleur) {
+    this.vitesseMax = vitesseMax;
+  }
+}
+
+class Cabriolet extends Voiture {
+  int tempsDeDecapotage = 3;
+
+  void cheveuxAuxVents() {
+    print("Je fais le cake sur le promenade des anglais ");
+  }
+
+  Cabriolet(
+      String marque, String modele, int kilometrage, int annee, String couleur)
+      : super(marque, modele, kilometrage, annee, couleur);
+}
+
+//Console 
+"Fiat"
+66000
+"Broom Broom"
+66001
+"Clio"
+"Gris clair"
+"Je fais le cake sur le promenade des anglais" 
+"Broom Broom"
+"Broom Broom"
+3001
+"Vous qui etes derrière moi, prenez patience. Je ne vais qu'à 25 maximum"
+````
+
+## Le Polymorphisme
+
+````dart
+void main() {
+  var tri = new Triangle(4,2);
+  tri.calculerAire();
+  
+  var car = new Carre(4,2);
+  car.calculerAire();
+}
+
+class Triangle extends Forme {
+  
+  // largeur * longueur / 2 
+  @override
+  void calculerAire(){
+    super.calculerAire();
+    var aire = largeur * longueur / 2;
+    print("L'aire est $aire ");
+  }
+  
+  Triangle(int largeur, int longueur) : super(largeur, longueur);
+}
+
+class Carre extends Forme {
+  
+  //largeur * longueur
+  @override
+  void calculerAire(){
+    super.calculerAire();
+    var aire = longueur * largeur;
+    print("L'aire est $aire");
+  }
+  Carre(int largeur, int longueur) : super(largeur, longueur);
+}
+
+class Forme {
+  int largeur;
+  int longueur;
+
+  void calculerAire() {
+    print("Calcul de l'aire en cours ....");
+  }
+
+  Forme(int largeur, int longueur) {
+    this.largeur = largeur;
+    this.longueur = longueur;
+  }
+}
+
+//Console
+"Calcul de l'aire en cours ...."
+"L'aire est 4"
+"Calcul de l'aire en cours ...."
+"L'aire est 8"
+````
