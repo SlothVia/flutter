@@ -683,3 +683,45 @@ class Forme {
 "Calcul de l'aire en cours ...."
 "L'aire est 8"
 ````
+
+## Les Enum
+
+````dart
+void main() {
+  var appareil = flash.off;
+
+  switch (appareil) {
+    case flash.auto:
+      print("Flash Auto");
+      break;
+    case flash.off:
+      print("Flash Off");
+      break;
+    case flash.on:
+      print("Flash On");
+  }
+}
+
+enum flash { auto, off, on }
+
+//Console 
+"Flash Off"
+````
+
+# Section 6 : Les Widgets Basiques
+
+## Documentation
+
+[Flutter Docs](flutter.io)
+
+## Le MaterialApp
+
+[MaterialApp-class.html](https://api.flutter.dev/flutter/material/MaterialApp-class.html)
+
+## Le Scafold
+
+[Scaffold-class.html](https://api.flutter.dev/flutter/material/Scaffold-class.html)
+
+## L'Appbar
+
+[AppBar-class.html](https://api.flutter.dev/flutter/material/AppBar-class.html)
